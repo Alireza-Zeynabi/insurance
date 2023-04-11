@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en" dir="rtl">
+
+<head>
+    <!-- JS links -->
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+
+    <!-- Site title -->
+    <title>سایت آبشار بیمه</title>
+
+    <!-- CSS link -->
+    <link rel="stylesheet" href="CSS/style.css">
+</head>
+
+<body>
+    <!-- Start of main -->
+    <main>
+        <!-- Start of container -->
+        <div class="container">
+            <div class="login-form">
+                <div class="form-content">
+                    <h1>ورود از طریق نام کاربری</h1>
+                    <form action="#">
+                        <div class="input">
+                            <ion-icon name="person-outline"></ion-icon>
+                            <input type="text" placeholder="نام کاربر">
+                        </div>
+                        <div class="input">
+                            <ion-icon name="lock-closed-outline"></ion-icon>
+                            <input type="password" placeholder="رمز کاربر">
+                            <ion-icon class="eyes" name="eye-outline"></ion-icon>
+                        </div>
+                        <div class="check">
+                            <input type="checkbox">
+                            <span>مرا به خاطر بسپار</span>
+
+                        </div>
+                        <button id="sign-btn">ورود</button>
+                        <span class="reges">ثبت نام نکرده اید؟ <a href="#">ثبت نام</a></span>
+                    </form>
+                </div>
+
+                <!-- sow after click -->
+                <div class="insurance">
+                    
+
+                    <div class="car-details">
+                        
+                    <div class="selects">
+                       
+                        <div class="car-select">
+                            <h4>مدل خودرو</h4>
+                            <select name="" id="car">
+                                <option value="">مدل خودرو</option>
+                                <option value="">پراید</option>
+                                <option value="">اشکان</option>
+                                <option value="">برلیانس h230</option>
+                                <option value="">پژوه 405</option>
+                                <option value="">پیکان جوانان </option>
+                                <option value="">تیگو5</option>
+                            </select>
+                        </div>
+                   
+                        <div class="year-select">
+                            <h4> سال ساخت </h4>
+                            <select name="" id="year">
+                                <option value="">سال ساخت</option>
+                            </select>
+                        </div>
+    
+                       
+                    </div>
+                
+                    <div class="car-tag">
+                       <img src="Images/car-plate-default.svg" alt="">
+                       
+                       <select name="" id="tag-select1"></select>
+                       <select name="" id="tag-select2"></select>
+                       <select name="" id="tag-select3"></select>
+                       <select name="" id="tag-select4"></select>
+                    </div>
+                    </div>
+                    <hr>
+
+                        
+                    <h4>نوع بیمه</h4>
+                    <div class="inc-input">
+
+                        <div>
+                            <input type="radio" name="insurance">
+                            <label for="insurance">شخص ثالث</label>
+                        </div>     
+                        <div>
+                            <input type="radio" name="insurance">
+                            <label for="insurance">بیمه بدنه</label>
+                        </div>
+                     
+                    </div>
+
+                   <button class="submit-btn">ثبت</button>
+
+                    <!-- <div class="factor"></div> -->
+                </div>
+
+            </div>
+
+            <div class="ins-form"></div>
+
+            <div class="text">
+                <div class="text-content">
+                    <h2>به سایت بیمه ایران خوش امدید</h2>
+                    <p id="effectPar"></p>
+                </div>
+            </div>
+        </div>
+        <!-- End of container -->
+    </main>
+    <!-- End of main -->
+
+    <script src="JS/script.js"></script>
+</body>
+
+</html>
