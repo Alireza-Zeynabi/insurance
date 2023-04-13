@@ -1,5 +1,5 @@
 // --> Variables
-// Selecting lorem in variable
+// Selecting text in variable
 const txt =
     "در این سایت شما میتونید با کمترین هزینه و دردسر ماشین خودتون رو بیمه کنید",
   // Selecting sign button
@@ -95,9 +95,9 @@ for (let x = 111; x <= 999; x++) {
 }
 
 // Creating loop for car tag level3
-let prsionWords = ["الف", "ب", "ج", "خ", "ذ", "ز", "ض", "ظ", "غ", "ف", "ن"];
+let prsionWords = ["د", "ب", "ج", "ه", "ق", "ص", "م", "ن", "ل", "ی", "س" ,'و','ط'];
 for (let z = 0; z < prsionWords.length; z++) {
-  let ct3 = `<option value="${z}">${z}</option>`;
+  let ct3 = `<option value="${z}">${prsionWords[z]}</option>`;
   tagSelect3.insertAdjacentHTML("beforeend", ct3);
 }
 
@@ -113,6 +113,7 @@ function findBasePrie() {
   } else if (cars == "prid") {
     basePrice = 2000000;
   } else if (cars == "Ashkan") {
+    basePrice = 0;
     return alert(
       "مشتری گرامی به دلیل پایین بودن قیمت کالای شما بیمه به شمابدهکار شد با عرض پوزش"
     );

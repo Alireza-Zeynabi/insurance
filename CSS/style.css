@@ -187,8 +187,8 @@ html {
 }
 /* Insurance hr Style */
 .insurance hr {
-  color: #000;
-  margin-top: 20px;
+  color: #ccc;
+  margin-top: 100px;
 }
 /* Insurance select title Style */
 .insurance .selects > h4 {
@@ -204,9 +204,14 @@ html {
 }
 /* Insurance title Style */
 .insurance h4 {
-  margin-right: 9%;
-  margin-top: 20px;
-  margin-bottom: 5%;
+  margin: 5% 8.5% 5% 0;
+}
+/* Insurance year select & car select title  Style */
+.insurance .year-select h4,
+.insurance .car-select h4{
+  margin-right: 3%;
+  margin-top: 25px;
+  margin-bottom: 3%;
 }
 /* Insurance input Style */
 .inc-input {
@@ -230,30 +235,33 @@ html {
 /* Car tag Style */
 .car-tag {
   position: relative;
+  margin-bottom: 80px;
 }
 /* Car tag select Style */
 .car-tag select {
   position: absolute;
+  background: transparent;
+  border: none;
 }
 /* Car tag level1 Style */
 .car-tag #tag-select1 {
-  left: 84%;
-  top: 12px;
+  left: 80%;
+  top: 15px;
 }
 /* Car tag level2 Style */
 .car-tag #tag-select2 {
-  left: 60%;
-  top: 12px;
+  left: 54%;
+  top: 15px;
 }
 /* Car tag level3 Style */
 .car-tag #tag-select3 {
-  left: 40%;
-  top: 12px;
+  left: 34%;
+  top: 15px;
 }
 /* Car tag level4 Style */
 .car-tag #tag-select4 {
-  left: 15%;
-  top: 12px;
+  left: 14%;
+  top: 15px;
 }
 /* Factor Style */
 .factor {
