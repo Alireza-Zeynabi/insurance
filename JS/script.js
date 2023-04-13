@@ -1,6 +1,7 @@
 // --> Variables
 // Selecting lorem in variable
-const txt = 'در این سایت شما میتونید با کمترین هزینه و دردسر ماشین خودتون رو بیمه کنید',
+const txt =
+    "در این سایت شما میتونید با کمترین هزینه و دردسر ماشین خودتون رو بیمه کنید",
   // Selecting sign button
   signBtn = document.getElementById("sign-btn"),
   // Selecting form content
@@ -15,6 +16,14 @@ const txt = 'در این سایت شما میتونید با کمترین هزی
   factor = document.querySelector(".factor"),
   // Selecting car for option
   car = document.querySelector("#car"),
+  // Selecting car tag level1
+  tagSelect1 = document.querySelector("#tag-select1"),
+  // Selecting car tag level2
+  tagSelect2 = document.querySelector("#tag-select2"),
+  // Selecting car tag level3
+  tagSelect3 = document.querySelector("#tag-select3"),
+  // Selecting car tag level4
+  tagSelect4 = document.querySelector("#tag-select4"),
   // Selecting year for option
   produceYear = document.querySelector("#year");
 
@@ -25,6 +34,8 @@ document.addEventListener("DOMContentLoaded", typeWriter);
 signBtn.addEventListener("click", insurancePage);
 // Event for submit button
 submitBtn.addEventListener("click", showFactor);
+// Event for when select was change
+car.addEventListener("change", findBasePrie);
 
 // --> Functions
 // Function for timer for text effect in HTML
@@ -68,10 +79,7 @@ function carModelYear() {
 // Call carModelYear function
 carModelYear();
 
-const tagSelect1 = document.querySelector("#tag-select1"),
-  tagSelect2 = document.querySelector("#tag-select2"),
-  tagSelect3 = document.querySelector("#tag-select3"),
-  tagSelect4 = document.querySelector("#tag-select4");
+// Creating loop for car tag level1
 for (let i = 10; i <= 99; i++) {
   let ct1 = `<option value="${i}">${i}</option>`;
   tagSelect1.insertAdjacentHTML("beforeend", ct1);
@@ -80,27 +88,26 @@ for (let i = 10; i <= 99; i++) {
   tagSelect4.insertAdjacentHTML("beforeend", ct4);
 }
 
+// Creating loop for car tag level2
 for (let x = 111; x <= 999; x++) {
   let ct2 = `<option value="${x}">${x}</option>`;
   tagSelect2.insertAdjacentHTML("beforeend", ct2);
 }
 
+// Creating loop for car tag level3
 let prsionWords = ["الف", "ب", "ج", "خ", "ذ", "ز", "ض", "ظ", "غ", "ف", "ن"];
 for (let z = 0; z < prsionWords.length; z++) {
   let ct3 = `<option value="${z}">${z}</option>`;
   tagSelect3.insertAdjacentHTML("beforeend", ct3);
 }
 
-// =-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-
-
+// Functions for check the price of the car
 let basePrice = 0;
-
-car.addEventListener("change", findBasePrie);
-
-function findBasePrie(params) {
+function findBasePrie() {
+  // Selecting car values
   let cars = car.value;
 
-  // gheymat paeen
+  // Low price cars
   if (cars == "") {
     return alert("لطفا موارد خواسته شده برا وارد کنید");
   } else if (cars == "prid") {
@@ -115,8 +122,7 @@ function findBasePrie(params) {
     basePrice = 2000000;
   }
 
-  // =-=-=-=-=-=-=-=-=-=-=-=
-  //gheymat motevaset
+  // Medium segment cars
   else if (cars == "brlH230") {
     basePrice = 5000000;
   } else if (cars == "samand") {
@@ -133,8 +139,7 @@ function findBasePrie(params) {
     basePrice = 5000000;
   }
 
-  // -=-=-=-=-=-=-=-=-=
-  // gheymat bala
+  // High priced cars
   else if (cars == "supra") {
     basePrice = 25000000;
   } else if (cars == "hilux") {
@@ -149,5 +154,3 @@ function findBasePrie(params) {
     basePrice = 25000000;
   }
 }
-
-
