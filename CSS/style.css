@@ -1,7 +1,10 @@
+/* Fonts */
 @font-face {
   font-family: Iran-Yekan;
   src: url("../Fonts/IRANYekanXVF.ttf");
 }
+
+/* All Selector */
 * {
   margin: 0;
   padding: 0;
@@ -14,11 +17,12 @@ html {
   direction: rtl;
 }
 
+/* Container Style */
 .container {
   width: 100%;
   display: flex;
 }
-
+/* Login form Style */
 .container .login-form {
   height: 100vh;
   width: 60%;
@@ -26,8 +30,8 @@ html {
   justify-content: center;
   align-items: center;
   flex-direction: column;
-
 }
+/* Form content Style */
 .container .login-form .form-content {
   width: 100%;
   display: flex;
@@ -35,15 +39,18 @@ html {
   align-items: center;
   flex-direction: column;
 }
+/* login form title Style */
 .container .login-form h1 {
   font-size: 45px;
   margin-bottom: 50px;
 }
+/* form Style */
 .container .login-form .form-content form {
   display: flex;
   flex-direction: column;
   width: 100%;
 }
+/* Input class Style */
 .container .input {
   width: 60%;
   margin: auto;
@@ -53,6 +60,7 @@ html {
   box-shadow: 20px 20px 20px #8e1df720, -10px -10px 20px #8e1df720;
   position: relative;
 }
+/* Input Style */
 .container .input input {
   width: 100%;
   height: 100%;
@@ -61,6 +69,7 @@ html {
   font-size: 18px;
   border: none;
 }
+/* Icon in input class Style */
 .container .input ion-icon {
   position: absolute;
   color: #8e1df7;
@@ -69,26 +78,36 @@ html {
   right: 20px;
   transform: translateY(-50%);
 }
+/* Eye in input Style */
 .container .input .eyes {
   right: 92%;
   font-size: 22px;
   cursor: pointer;
 }
+/* Check Style */
 .container .check {
   width: 60%;
   margin: 0 auto 40px;
   display: flex;
   align-items: center;
 }
+/* Input in check Style */
 .container .check input {
   margin: 0 20px 0 5px;
 }
+/* Span in check Style */
 .container .check span {
   margin-top: 3px;
   color: #555;
   font-size: 13px;
 }
-.container .login-form .form-content #sign-btn {
+/* Login buttons Style */
+.login-btns  {
+  display: flex;
+  flex-direction: column;
+}
+/* Sign button Style */
+.container .login-form #sign-btn {
   color: #fff;
   font-size: 20px;
   width: 250px;
@@ -100,17 +119,20 @@ html {
   margin-bottom: 20px;
   border: none;
 }
-.container .login-form .form-content .reges {
+/* Register Style */
+.container .login-form .reges {
   text-align: center;
   font-size: 14px;
 }
-.container .login-form .form-content .reges a {
+/* Register link Style */
+.container .login-form .reges a {
   color: #8e1df7;
 }
-.container .login-form .form-content .reges:hover a {
+/* Register link hovering Style */
+.container .login-form .reges:hover a {
   text-decoration: underline;
 }
-
+/* Text Style */
 .container .text {
   height: 100vh;
   width: 40%;
@@ -121,11 +143,18 @@ html {
   flex-direction: column;
   text-align: center;
 }
+/* Loader Style */
+.loader {
+  display: none;
+  justify-content: center;
+}
+/* Text title Style */
 .container .text .text-content h2 {
   color: #fff;
   font-size: 40px;
   margin-bottom: 20px;
 }
+/* Text paragraph Style */
 .container .text .text-content p {
   margin: 0 auto;
   width: 60%;
@@ -133,57 +162,59 @@ html {
   font-size: 14px;
   line-height: 2;
 }
-/* =-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=- */
-/* show sfter click */
-
+/* Insurance Style */
 .insurance {
   width: 100%;
   height: 100%;
   display: none;
   flex-direction: column;
 }
-.insurance .selects{
+/* Insurance select Style */
+.insurance .selects {
   display: flex;
   position: relative;
   justify-content: space-around;
   flex-direction: column;
   width: 50%;
 }
+/* Insurance select Style */
 .insurance .selects select {
   min-width: 50px;
   padding: 10px;
   width: 40%;
-  border-radius: 50px;  
+  border-radius: 50px;
   box-shadow: 20px 20px 20px #8e1df720, -10px -10px 20px #8e1df720;
 }
-.insurance hr{
+/* Insurance hr Style */
+.insurance hr {
   color: #000;
   margin-top: 20px;
 }
-
-.insurance .selects > h4{
-  /* margin-bottom: 20px; */
+/* Insurance select title Style */
+.insurance .selects > h4 {
   margin-top: 20px;
   color: #fff;
 }
-
-.car-details{
+/* Car details Style */
+.car-details {
   display: flex;
   align-items: center;
   justify-content: space-around;
   margin-top: 7%;
 }
-
-.insurance h4{
+/* Insurance title Style */
+.insurance h4 {
   margin-right: 9%;
   margin-top: 20px;
   margin-bottom: 5%;
 }
-.inc-input{
+/* Insurance input Style */
+.inc-input {
   display: flex;
   justify-content: space-around;
 }
-.submit-btn{
+/* Submit button Style */
+.submit-btn {
   color: #fff;
   font-size: 20px;
   width: 250px;
@@ -196,31 +227,36 @@ html {
   border: none;
   margin-bottom: 10%;
 }
-.car-tag{
+/* Car tag Style */
+.car-tag {
   position: relative;
 }
-.car-tag select{
+/* Car tag select Style */
+.car-tag select {
   position: absolute;
 }
-.car-tag #tag-select1{
+/* Car tag level1 Style */
+.car-tag #tag-select1 {
   left: 84%;
   top: 12px;
 }
-.car-tag #tag-select2{
+/* Car tag level2 Style */
+.car-tag #tag-select2 {
   left: 60%;
   top: 12px;
 }
-.car-tag #tag-select3{
+/* Car tag level3 Style */
+.car-tag #tag-select3 {
   left: 40%;
   top: 12px;
 }
-.car-tag #tag-select4{
+/* Car tag level4 Style */
+.car-tag #tag-select4 {
   left: 15%;
   top: 12px;
 }
-/* -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-= */
-
-.factor{
+/* Factor Style */
+.factor {
   width: 100%;
   height: 100%;
   background-color: rgb(232, 0, 0);
