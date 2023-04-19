@@ -37,6 +37,7 @@ signBtn.addEventListener("click", insurancePage);
 submitBtn.addEventListener("click", showFactor);
 // Event for when select was change
 car.addEventListener("change", findBasePrie);
+produceYear.addEventListener('change',findYear);
 
 // --> Functions
 // Function for timer for text effect in HTML
@@ -101,15 +102,18 @@ for (let z = 0; z < prsionWords.length; z++) {
 }
 
 
+
+
 // Functions for check the price of the car
 let basePrice = 0;
+
 function findBasePrie() {
   // Selecting car values
   let cars = car.value;
 
   // Low price cars
   if (cars == "") {
-    return alert("لطفا موارد خواسته شده برا وارد کنید");
+
   } else if (cars == "prid") {
     basePrice = 2000000;
   } else if (cars == "Ashkan") {
@@ -155,12 +159,12 @@ function findBasePrie() {
     basePrice = 25000000;
   }
 
-
 }
 // =-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-
 
 
-produceYear.addEventListener('change',findYear)
+
+
 let yearPrice = 0
 function findYear(basePrice) {
   
@@ -168,21 +172,39 @@ function findYear(basePrice) {
  
 
 if (years == '') {
+
   
-}if( years == '1402' ){
+}if( years >= 1397 || years == 1402  ){
 
   yearPrice = 500000
 
-}
+}else if( years >= 1392|| years == 1397 ) {
 
+  yearPrice = 1000000
+
+}else if ( years >= 1387 || years == 1392) {
+
+  yearPrice = 1500000
+
+}else if ( years >= 1382 || years == 1387) {
+
+  yearPrice = 2000000
+}
 
 }
 
   
-  // let lastPrice = yearPrice + basePrice
  
+
+
+
 // Function for factor to show factor page
 function showFactor() {
+
+  if (car.value == '' || year.value == '') {
+   return  alert('لطفا موارد خواسته شده را پر کنید ')
+  }
+
   insurance.style.display = "none";
   factor.style.display = "block";
 
