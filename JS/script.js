@@ -25,7 +25,8 @@ const txt =
   // Selecting car tag level4
   tagSelect4 = document.querySelector("#tag-select4"),
   // Selecting year for option
-  produceYear = document.querySelector("#year");
+  produceYear = document.querySelector("#year"),
+  showLastPrice = document.querySelector('#show-lastPrice')
 
 // --> Event
 // Event for text effect in HTML
@@ -54,11 +55,7 @@ function insurancePage(e) {
   // textCont.style.display = 'none';
   insurance.style = "display:flex";
 }
-// Function for factor to show factor page
-function showFactor() {
-  insurance.style.display = "none";
-  factor.style.display = "block";
-}
+
 // Function for creating model car
 function carModelYear() {
   // Create variable for convert date to persian date
@@ -71,10 +68,12 @@ function carModelYear() {
   // Create loop to create option for year
   for (let i = maxYear; i >= minYear; i--) {
     let option = document.createElement("option");
+    option.setAttribute('value',[i])
     produceYear.appendChild(option);
     option.value = i;
     option.innerHTML = ` سال ${i}`;
   }
+
 }
 // Call carModelYear function
 carModelYear();
@@ -100,6 +99,7 @@ for (let z = 0; z < prsionWords.length; z++) {
   let ct3 = `<option value="${z}">${prsionWords[z]}</option>`;
   tagSelect3.insertAdjacentHTML("beforeend", ct3);
 }
+
 
 // Functions for check the price of the car
 let basePrice = 0;
@@ -154,4 +154,44 @@ function findBasePrie() {
   } else if (cars == "Amir206") {
     basePrice = 25000000;
   }
+
+
 }
+// =-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-
+
+
+produceYear.addEventListener('change',findYear)
+let yearPrice = 0
+function findYear(basePrice) {
+  
+ let years = produceYear.value
+ 
+
+if (years == '') {
+  
+}if( years == '1402' ){
+
+  yearPrice = 500000
+
+}
+
+
+}
+
+  
+  // let lastPrice = yearPrice + basePrice
+ 
+// Function for factor to show factor page
+function showFactor() {
+  insurance.style.display = "none";
+  factor.style.display = "block";
+
+  let lastPrice =  yearPrice + basePrice
+
+  showLastPrice.innerHTML = lastPrice
+
+}
+
+
+
+
