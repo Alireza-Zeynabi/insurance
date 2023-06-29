@@ -2,6 +2,7 @@
 // Selecting text in variable
 const txt =
     "در این سایت شما میتونید با کمترین هزینه و دردسر ماشین خودتون رو بیمه کنید",
+    userName = document.querySelector('#user-name')
   // Selecting sign button
   signBtn = document.getElementById("sign-btn"),
   // Selecting form content
@@ -56,7 +57,7 @@ function insurancePage(e) {
   // textCont.style.display = 'none';
   insurance.style = "display:flex";
 }
-
+// =-=-=-=-=-=-=-=-=-==-=-=-=-=-=-=-=-=-
 // Function for creating model car
 function carModelYear() {
   // Create variable for convert date to persian date
@@ -193,11 +194,6 @@ if (years == '') {
 
 }
 
-  
- 
-
-
-
 // Function for factor to show factor page
 function showFactor() {
 
@@ -205,8 +201,12 @@ function showFactor() {
    return  alert('لطفا موارد خواسته شده را پر کنید ')
   }
 
+  const factorText = document.createElement('span')
+  factorText.classList.add('factorText')
+  factor.appendChild(factorText)
+
   insurance.style.display = "none";
-  factor.style.display = "block";
+  factor.style.display = "flex";
 
   let lastPrice =  yearPrice + basePrice
 
