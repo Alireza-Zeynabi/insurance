@@ -102,7 +102,7 @@ html {
   font-size: 13px;
 }
 /* Login buttons Style */
-.login-btns  {
+.login-btns {
   display: flex;
   flex-direction: column;
 }
@@ -208,7 +208,7 @@ html {
 }
 /* Insurance year select & car select title  Style */
 .insurance .year-select h4,
-.insurance .car-select h4{
+.insurance .car-select h4 {
   margin-right: 3%;
   margin-top: 25px;
   margin-bottom: 3%;
@@ -271,17 +271,46 @@ html {
   justify-content: center;
   align-items: center;
 }
-#factor-card{
+/* Factor card Style */
+#factor-card {
   background: linear-gradient(170deg, #8e1df7, #19025e);
-  width: 80%;
-  height: 30%;
+  width: 65%;
+  height: 40%;
   border-radius: 15px;
   display: flex;
   flex-direction: column;
   align-items: center;
+  color: #fff;
 }
-
-#factor-card > *{
-  margin: 10px;
- color: #fff;
+/* Title factor card Style */
+#factor-card h3:first-of-type {
+  font-size: 40px;
+  margin-top: 50px;
+}
+/* Span factor card Style */
+#factor-card span {
+  font-size: 20px;
+  margin-top: 40px;
+}
+/* Number factor card Style */
+#factor-card h3:last-of-type {
+  font-size: 25px;
+  margin-top: 20px;
+  letter-spacing: 1.5px;
+}
+/* Unit Style */
+.unit {
+  letter-spacing: 0;
+  margin-right: 10px;
+}
+/* Button factor card Style */
+#factor-card button {
+  font-size: 16px;
+  background-color: #fff;
+  border: none;
+  outline: none;
+  padding: 20px 55px;
+  border-radius: 5px;
+  margin-top: 50px;
+  cursor: pointer;
 }

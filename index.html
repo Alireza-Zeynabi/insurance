@@ -1,183 +1,205 @@
 <!DOCTYPE html>
 <html lang="en" dir="rtl">
-
-<head>
+  <head>
     <!-- JS links -->
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
-    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script
+      type="module"
+      src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"
+    ></script>
+    <script
+      nomodule
+      src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"
+    ></script>
 
     <!-- Site title -->
     <title>سایت بیمه ایران</title>
 
     <!-- CSS link -->
-    <link rel="stylesheet" href="CSS/style.css">
-</head>
+    <link rel="stylesheet" href="CSS/style.css" />
+  </head>
 
-<body>
+  <body>
     <!-- Start of main -->
     <main>
-        <!-- Start of container -->
-        <div class="container">
-            <!-- Start of login form -->
-            <div class="login-form">
-                <!-- Start of form content -->
-                <div class="form-content">
-                    <h1>ورود از طریق نام کاربری</h1>
+      <!-- Start of container -->
+      <div class="container">
+        <!-- Start of login form -->
+        <div class="login-form">
+          <!-- Start of form content -->
+          <div class="form-content">
+            <h1>ورود از طریق نام کاربری</h1>
 
-                    <!-- Start of form -->
-                    <form action="#">
-                        <!-- Start of first input -->
-                        <div class="input">
-                            <ion-icon name="person-outline"></ion-icon>
-                            <input id="user-name" type="text" placeholder="نام کاربر">
-                        </div>
-                        <!-- End of first input -->
+            <!-- Start of form -->
+            <form action="#">
+              <!-- Start of first input -->
+              <div class="input">
+                <ion-icon name="person-outline"></ion-icon>
+                <input id="user-name" type="text" placeholder="نام کاربر" />
+              </div>
+              <!-- End of first input -->
 
-                        <!-- Start of second input -->
-                        <div class="input">
-                            <ion-icon name="lock-closed-outline"></ion-icon>
-                            <input type="password" placeholder="رمز کاربر">
-                            <ion-icon class="eyes" name="eye-outline"></ion-icon>
-                        </div>
-                        <!-- End of second input -->
+              <!-- Start of second input -->
+              <div class="input">
+                <ion-icon name="lock-closed-outline"></ion-icon>
+                <input type="password" placeholder="رمز کاربر" />
+                <ion-icon class="eyes" name="eye-outline"></ion-icon>
+              </div>
+              <!-- End of second input -->
 
-                        <!-- Start of check -->
-                        <div class="check">
-                            <input type="checkbox">
-                            <span>مرا به خاطر بسپار</span>
-                        </div>
-                        <!-- End of check -->
+              <!-- Start of check -->
+              <div class="check">
+                <input type="checkbox" />
+                <span>مرا به خاطر بسپار</span>
+              </div>
+              <!-- End of check -->
 
-                        <!-- login button -->
-                        <div class="login-btns">
-                            <button id="sign-btn">ورود</button>
-                            <!-- regester link -->
-                            <span class="reges">ثبت نام نکرده اید؟ <a href="#">ثبت نام</a></span>
-                        </div>
+              <!-- login button -->
+              <div class="login-btns">
+                <button id="sign-btn">ورود</button>
+                <!-- regester link -->
+                <span class="reges"
+                  >ثبت نام نکرده اید؟ <a href="#">ثبت نام</a></span
+                >
+              </div>
 
-                        <div class="loader">
-                            <img src="Images/Spinner-0.9s-237px.gif" alt="">
-                        </div>
-                    </form>
-                    <!-- End of form -->
+              <div class="loader">
+                <img src="Images/Spinner-0.9s-237px.gif" alt="" />
+              </div>
+            </form>
+            <!-- End of form -->
+          </div>
+          <!-- End of form content -->
+
+          <!-- Start of insurance page -->
+          <div class="insurance">
+            <!-- Start of car details -->
+            <div class="car-details">
+              <!-- Start of selects and options -->
+              <div class="selects">
+                <!-- Start of car select -->
+                <div class="car-select">
+                  <h4>مدل خودرو</h4>
+                  <select name="" id="car">
+                    <option class="carModel" value="">مدل خودرو</option>
+                    <option class="carModel" value="prid">پراید</option>
+                    <option class="carModel" value="Ashkan">اشکان</option>
+                    <option class="carModel" value="brlH230">
+                      برلیانس h230
+                    </option>
+                    <option class="carModel" value="samand">سمند ef7</option>
+                    <option class="carModel" value="sandrow">ساندرو</option>
+                    <option class="carModel" value="supra">سوپرا mk4</option>
+                    <option class="carModel" value="hilux">هایلوکس</option>
+                    <option class="carModel" value="xantia">زانتیا</option>
+                    <option class="carModel" value="porsche">پورشه 911</option>
+                    <option class="carModel" value="pars68">
+                      پرشیا پلاک کرج
+                    </option>
+                    <option class="carModel" value="pars">پرشیا معمولی</option>
+                    <option class="carModel" value="405">پژوه 405</option>
+                    <option class="carModel" value="Amir206">206 امیر</option>
+                    <option class="carModel" value="206">206 معمولی</option>
+                    <option class="carModel" value="cow nissan">
+                      نیسان گاوی
+                    </option>
+                    <option class="carModel" value="youngs pikan ">
+                      پیکان جوانان
+                    </option>
+                    <option class="carModel" value="tiggo5">تیگو5</option>
+                  </select>
                 </div>
-                <!-- End of form content -->
+                <!-- End of car select -->
 
-                <!-- Start of insurance page -->
-                <div class="insurance">
-                    <!-- Start of car details -->
-                    <div class="car-details">
-                        <!-- Start of selects and options -->
-                        <div class="selects">
-                            <!-- Start of car select -->
-                            <div class="car-select">
-                                <h4>مدل خودرو</h4>
-                                <select name="" id="car">
-
-                                    <option class="carModel" value="">مدل خودرو</option>
-                                    <option class="carModel" value="prid">پراید</option>
-                                    <option class="carModel" value="Ashkan">اشکان</option>
-                                    <option class="carModel" value="brlH230">برلیانس h230</option>
-                                    <option class="carModel" value="samand">سمند ef7</option>
-                                    <option class="carModel" value="sandrow">ساندرو</option>
-                                    <option class="carModel" value="supra">سوپرا mk4</option>
-                                    <option class="carModel" value="hilux">هایلوکس</option>
-                                    <option class="carModel" value="xantia">زانتیا</option>
-                                    <option class="carModel" value="porsche">پورشه 911</option>
-                                    <option class="carModel" value="pars68">پرشیا پلاک کرج</option>
-                                    <option class="carModel" value="pars">پرشیا معمولی</option>
-                                    <option class="carModel" value="405">پژوه 405</option>
-                                    <option class="carModel" value="Amir206">206 امیر</option>
-                                    <option class="carModel" value="206">206 معمولی</option>
-                                    <option class="carModel" value="cow nissan">نیسان گاوی</option>
-                                    <option class="carModel" value="youngs pikan ">پیکان جوانان </option>
-                                    <option class="carModel" value="tiggo5">تیگو5</option>
-                                </select>
-                            </div>
-                            <!-- End of car select -->
-
-                            <!-- Start of year model select -->
-                            <div class="year-select">
-                                <h4> سال ساخت </h4>
-                                <select name="" id="year">
-                                    <option value="">سال ساخت</option>
-                                </select>
-                            </div>
-                            <!-- Start of year model select -->
-                        </div>
-                        <!-- End of selects and options -->
-
-                        <!-- Start of car tags container -->
-                        <div class="craTag">
-                            <h4>پلاک خودرو</h4>
-                            <!-- Start of car tags -->
-                            <div class="car-tag">
-                                <img src="Images/car-plate-default.svg" alt="">
-                                <select id="tag-select1"></select>
-                                <select id="tag-select2"></select>
-                                <select id="tag-select3"></select>
-                                <select id="tag-select4"></select>
-                            </div>
-                            <!-- End of car tags -->
-                        </div>
-                        <!-- End of car tags container -->
-                    </div>
-                    <!-- End of car details -->
-                    <hr>
-
-                    <h4>نوع بیمه</h4>
-                    <!-- Start of insurance inputs -->
-                    <div class="inc-input">
-                        <div>
-                            <input class="ins-inpts" type="radio" name="insurance" value="0">
-                            <label for="insurance">شخص ثالث</label>
-                        </div>
-                        <div>
-                            <input class="ins-inpts" type="radio" name="insurance" value="1">
-                            <label for="insurance">بیمه بدنه</label>
-                        </div>
-                    </div>
-                    <!-- End of insurance inputs -->
-
-                    <!-- submit button -->
-                    <button class="submit-btn">ثبت</button>
+                <!-- Start of year model select -->
+                <div class="year-select">
+                  <h4>سال ساخت</h4>
+                  <select name="" id="year">
+                    <option value="">سال ساخت</option>
+                  </select>
                 </div>
-                <!-- End of insurance page -->
+                <!-- Start of year model select -->
+              </div>
+              <!-- End of selects and options -->
 
-                <!-- Start of factor -->
-                <div class="factor">
-                    <div id="factor-card" >
-
-                        <h3>خلاصه فاکتور</h3>
-                        <span>قیمت نهایی شما</span>
-    
-                        <h3 id="show-lastPrice"></h3>
-                    </div>
-          
+              <!-- Start of car tags container -->
+              <div class="craTag">
+                <h4>پلاک خودرو</h4>
+                <!-- Start of car tags -->
+                <div class="car-tag">
+                  <img src="Images/car-plate-default.svg" alt="" />
+                  <select id="tag-select1"></select>
+                  <select id="tag-select2"></select>
+                  <select id="tag-select3"></select>
+                  <select id="tag-select4"></select>
                 </div>
-                <!-- End of factor -->
+                <!-- End of car tags -->
+              </div>
+              <!-- End of car tags container -->
             </div>
-            <!-- End of login form -->
+            <!-- End of car details -->
+            <hr />
 
-            <!-- Start of text -->
-            <div class="text">
-                <!-- Start of text content -->
-                <div class="text-content">
-                    <h2>به سایت بیمه ایران خوش امدید</h2>
-                    <p id="effectPar"></p>
-                </div>
-                <!-- End of text content -->
+            <h4>نوع بیمه</h4>
+            <!-- Start of insurance inputs -->
+            <div class="inc-input">
+              <div>
+                <input
+                  class="ins-inpts"
+                  type="radio"
+                  name="insurance"
+                  value="0"
+                />
+                <label for="insurance">شخص ثالث</label>
+              </div>
+              <div>
+                <input
+                  class="ins-inpts"
+                  type="radio"
+                  name="insurance"
+                  value="1"
+                />
+                <label for="insurance">بیمه بدنه</label>
+              </div>
             </div>
-            <!-- End of text -->
+            <!-- End of insurance inputs -->
+
+            <!-- submit button -->
+            <button class="submit-btn">ثبت</button>
+          </div>
+          <!-- End of insurance page -->
+
+          <!-- Start of factor -->
+          <div class="factor">
+            <div id="factor-card">
+              <h3>خلاصه فاکتور</h3>
+              <span> قیمت نهایی شما :</span>
+
+              <h3 id="show-lastPrice"></h3>
+              <button>پرداخت</button>
+            </div>
+          </div>
+          <!-- End of factor -->
         </div>
-        <!-- End of container -->
+        <!-- End of login form -->
+
+        <!-- Start of text -->
+        <div class="text">
+          <!-- Start of text content -->
+          <div class="text-content">
+            <h2>به سایت بیمه ایران خوش امدید</h2>
+            <p id="effectPar"></p>
+          </div>
+          <!-- End of text content -->
+        </div>
+        <!-- End of text -->
+      </div>
+      <!-- End of container -->
     </main>
     <!-- End of main -->
 
     <script src="JS/script.js"></script>
-</body>
-
+  </body>
 </html>

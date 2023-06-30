@@ -2,32 +2,32 @@
 // Selecting text in variable
 const txt =
     "در این سایت شما میتونید با کمترین هزینه و دردسر ماشین خودتون رو بیمه کنید",
-    userName = document.querySelector('#user-name')
-  // Selecting sign button
-  signBtn = document.getElementById("sign-btn"),
+  userName = document.querySelector("#user-name");
+// Selecting sign button
+(signBtn = document.getElementById("sign-btn")),
   // Selecting form content
-  formCont = document.querySelector(".form-content"),
+  (formCont = document.querySelector(".form-content")),
   // Selecting text content
-  textCont = document.querySelector(".text-content"),
+  (textCont = document.querySelector(".text-content")),
   // Selecting insurance page
-  insurance = document.querySelector(".insurance"),
+  (insurance = document.querySelector(".insurance")),
   // Selecting submit button
-  submitBtn = document.querySelector(".submit-btn"),
+  (submitBtn = document.querySelector(".submit-btn")),
   // Selecting factor page
-  factor = document.querySelector(".factor"),
+  (factor = document.querySelector(".factor")),
   // Selecting car for option
-  car = document.querySelector("#car"),
+  (car = document.querySelector("#car")),
   // Selecting car tag level1
-  tagSelect1 = document.querySelector("#tag-select1"),
+  (tagSelect1 = document.querySelector("#tag-select1")),
   // Selecting car tag level2
-  tagSelect2 = document.querySelector("#tag-select2"),
+  (tagSelect2 = document.querySelector("#tag-select2")),
   // Selecting car tag level3
-  tagSelect3 = document.querySelector("#tag-select3"),
+  (tagSelect3 = document.querySelector("#tag-select3")),
   // Selecting car tag level4
-  tagSelect4 = document.querySelector("#tag-select4"),
+  (tagSelect4 = document.querySelector("#tag-select4")),
   // Selecting year for option
-  produceYear = document.querySelector("#year"),
-  showLastPrice = document.querySelector('#show-lastPrice')
+  (produceYear = document.querySelector("#year")),
+  (showLastPrice = document.querySelector("#show-lastPrice"));
 
 // --> Event
 // Event for text effect in HTML
@@ -38,7 +38,7 @@ signBtn.addEventListener("click", insurancePage);
 submitBtn.addEventListener("click", showFactor);
 // Event for when select was change
 car.addEventListener("change", findBasePrie);
-produceYear.addEventListener('change',findYear);
+produceYear.addEventListener("change", findYear);
 
 // --> Functions
 // Function for timer for text effect in HTML
@@ -70,12 +70,11 @@ function carModelYear() {
   // Create loop to create option for year
   for (let i = maxYear; i >= minYear; i--) {
     let option = document.createElement("option");
-    option.setAttribute('value',[i])
+    option.setAttribute("value", [i]);
     produceYear.appendChild(option);
     option.value = i;
     option.innerHTML = ` سال ${i}`;
   }
-
 }
 // Call carModelYear function
 carModelYear();
@@ -96,14 +95,25 @@ for (let x = 111; x <= 999; x++) {
 }
 
 // Creating loop for car tag level3
-let prsionWords = ["د", "ب", "ج", "ه", "ق", "ص", "م", "ن", "ل", "ی", "س" ,'و','ط'];
+let prsionWords = [
+  "د",
+  "ب",
+  "ج",
+  "ه",
+  "ق",
+  "ص",
+  "م",
+  "ن",
+  "ل",
+  "ی",
+  "س",
+  "و",
+  "ط",
+];
 for (let z = 0; z < prsionWords.length; z++) {
   let ct3 = `<option value="${z}">${prsionWords[z]}</option>`;
   tagSelect3.insertAdjacentHTML("beforeend", ct3);
 }
-
-
-
 
 // Functions for check the price of the car
 let basePrice = 0;
@@ -114,7 +124,6 @@ function findBasePrie() {
 
   // Low price cars
   if (cars == "") {
-
   } else if (cars == "prid") {
     basePrice = 2000000;
   } else if (cars == "Ashkan") {
@@ -159,61 +168,45 @@ function findBasePrie() {
   } else if (cars == "Amir206") {
     basePrice = 25000000;
   }
-
 }
 // =-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-
 
-
-
-
-let yearPrice = 0
+let yearPrice = 0;
 function findYear(basePrice) {
-  
- let years = produceYear.value
- 
+  let years = produceYear.value;
 
-if (years == '') {
-
-  
-}if( years >= 1397 || years == 1402  ){
-
-  yearPrice = 500000
-
-}else if( years >= 1392|| years == 1397 ) {
-
-  yearPrice = 1000000
-
-}else if ( years >= 1387 || years == 1392) {
-
-  yearPrice = 1500000
-
-}else if ( years >= 1382 || years == 1387) {
-
-  yearPrice = 2000000
+  if (years == "") {
+  }
+  if (years >= 1397 || years == 1402) {
+    yearPrice = 500000;
+  } else if (years >= 1392 || years == 1397) {
+    yearPrice = 1000000;
+  } else if (years >= 1387 || years == 1392) {
+    yearPrice = 1500000;
+  } else if (years >= 1382 || years == 1387) {
+    yearPrice = 2000000;
+  }
 }
 
-}
+let unit = document.createElement("span");
+unit.innerHTML = "تومان";
+unit.classList.add("unit");
 
 // Function for factor to show factor page
 function showFactor() {
-
-  if (car.value == '' || year.value == '') {
-   return  alert('لطفا موارد خواسته شده را پر کنید ')
+  if (car.value == "" || year.value == "") {
+    return alert("لطفا موارد خواسته شده را پر کنید ");
   }
 
-  const factorText = document.createElement('span')
-  factorText.classList.add('factorText')
-  factor.appendChild(factorText)
+  const factorText = document.createElement("span");
+  factorText.classList.add("factorText");
+  factor.appendChild(factorText);
 
   insurance.style.display = "none";
   factor.style.display = "flex";
 
-  let lastPrice =  yearPrice + basePrice
+  let lastPrice = yearPrice + basePrice;
 
-  showLastPrice.innerHTML = lastPrice
-
+  showLastPrice.innerHTML = lastPrice;
+  showLastPrice.appendChild(unit);
 }
-
-
-
-
